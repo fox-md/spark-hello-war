@@ -22,7 +22,12 @@
 		</dependency>
 	</dependencies>
 
+	<properties>
+		<buildDirectory>${project.basedir}/target</buildDirectory>
+	</properties>
+
 	<build>
+		<directory>${buildDirectory}</directory>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
