@@ -18,7 +18,7 @@ jobs:
         docker ps -a
         docker ps -aq | while read list; do
           docker stop $list
-          docker rm list
+          docker rm $list
         done
         echo "after stop"
         docker ps -a
