@@ -16,11 +16,11 @@ jobs:
         docker run -d nginx
         echo "run"
         docker ps -a
-        docker ps -aq | xargs docker stop #| xargs docker rm
+        docker ps -aq | xargs docker stop | xargs docker rm
         echo "after stop"
         docker ps -a
-        docker ps -aq | xargs docker stop | xargs docker rm
-        echo "after rm"
-        docker ps -a
+        #docker ps -aq | xargs docker stop | xargs docker rm
+        #echo "after rm"
+        #docker ps -a
         #docker stop $(docker ps -a -q)
         #docker build . --file Dockerfile --tag my-image-name:$(date +%s)
