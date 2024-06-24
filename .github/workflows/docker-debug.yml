@@ -16,7 +16,10 @@ jobs:
         docker run -d nginx
         echo "run"
         docker ps -a
-        docker ps -aq | xargs docker stop | xargs docker rm
+        docker ps -aq | while read list; do
+          docker stop $list
+          docker rm list
+        done
         echo "after stop"
         docker ps -a
         #docker ps -aq | xargs docker stop | xargs docker rm
